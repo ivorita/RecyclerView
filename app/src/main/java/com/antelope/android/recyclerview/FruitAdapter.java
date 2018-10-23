@@ -48,6 +48,8 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
         //将item布局加载进来
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item,parent,false);
+
+        //将view传入构造函数中
         final ViewHolder holder = new ViewHolder(view);
         //注册子项最外层布局的点击事件。
         holder.fruitView.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +72,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
                 Toast.makeText(view.getContext(),"clicked image " + fruit.getName(),Toast.LENGTH_SHORT).show();
             }
         });
-        //传入构造函数中，最后将ViewHolder实例返回
+        //最后将ViewHolder实例返回
         return holder;
     }
 
